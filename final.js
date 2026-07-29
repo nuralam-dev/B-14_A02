@@ -14,7 +14,7 @@ function matchWinner(teamAGoals, teamBGoals) {
   return matchWinner;
 }
 
-// problem 02
+// problem_02
 function isElevatorSafe(weights) {
   if (Array.isArray(weights) === false) {
     return "Invalid";
@@ -32,7 +32,7 @@ function isElevatorSafe(weights) {
   return totalWeight;
 }
 
-// problem 03
+// problem_03
 
 function calculateAiCost(tokensUsed) {
   if (typeof tokensUsed !== "number" || tokensUsed < 0) {
@@ -45,4 +45,38 @@ function calculateAiCost(tokensUsed) {
   let chargedUnit = Math.floor(extraToken / 100);
   let totalCost = chargedUnit * 5;
   return totalCost;
+}
+// problem_04
+function topRatedRestaurant(restaurants) {
+  if (Array.isArray(restaurants) === false || restaurants.length === 0) {
+    return "Invalid";
+  }
+  let topRestaurants = restaurants[0];
+  for (let i = 1; i < restaurants.length; i++) {
+    if (restaurants[i].rating > topRestaurants.rating) {
+      topRestaurants = restaurants[i];
+    }
+  }
+
+  return topRestaurants.name.toUpperCase();
+}
+// problem_05
+function averageResponseTime(times) {
+  if (Array.isArray(times) === false) {
+    return "Invalid";
+  }
+
+  if (times.length === 0) {
+    return "Invalid";
+  }
+
+  let total = 0;
+  for (let i = 0; i < times.length; i++) {
+    if (typeof times[i] !== "number") {
+      return "Invalid";
+    }
+    total = total + times[i];
+  }
+
+  return total / times.length;
 }
