@@ -1,5 +1,5 @@
+// problem _01
 function matchWinner(teamAGoals, teamBGoals) {
-  // Write your code here…
   if (typeof teamAGoals !== "number" || typeof teamBGoals !== "number") {
     return "Invalid";
   }
@@ -13,8 +13,3 @@ function matchWinner(teamAGoals, teamBGoals) {
 
   return matchWinner;
 }
-
-console.log(matchWinner(2, 1));
-console.log(matchWinner(1, 3));
-console.log(matchWinner(1, 1));
-console.log(matchWinner("1", 1));
